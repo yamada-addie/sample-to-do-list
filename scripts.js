@@ -2,6 +2,14 @@ const cards = document.querySelectorAll(".card");
 const lists = document.querySelectorAll(".list");
 const inputField = document.getElementById("userInput");
 const button = document.getElementById("submitBtn");
+const menuBtn = document.getElementById("menu-btn");
+const sidebar = document.getElementById("sidebar");
+const mainContent = document.querySelector(".main-content");
+
+menuBtn.addEventListener("click", () => {
+    sidebar.classList.toggle("active");
+    mainContent.classList.toggle("shift");
+});
 
 for(const card of cards){
     card.addEventListener("dragstart", dragStart);
